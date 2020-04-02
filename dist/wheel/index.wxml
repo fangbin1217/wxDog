@@ -1,0 +1,16 @@
+<view>
+  <view class="wheel_wp sol-class">
+    <block wx:if="{{mode == 1}}">
+      <image class="dzpImage" src="{{dzpBgImage}}" />
+      <view class="wheel_pointer" bindtap="start" style="-webkit-transform:rotate({{deg}}deg) translateZ(0);transform:rotate({{deg}}deg) translateZ(0)">
+        <image class="dzpImage" src="./images/s-dial_pointer.png" />
+      </view>
+    </block>
+    <block wx:if="{{mode == 2}}">
+      <image class="dzpImage" src="{{dzpBgImage}}" style="-webkit-transform:rotate({{deg}}deg) translateZ(0);transform:rotate({{ deg}}deg) translateZ(0)" />
+      <view class="wheel_pointer" bindtap="start">
+        <image class="dzpImage" src="./images/s-dial_pointer.png" />
+      </view>
+    </block>
+  </view>
+</view>

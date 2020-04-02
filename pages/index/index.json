@@ -1,0 +1,9 @@
+{
+    "disableScroll": true,
+    "usingComponents": {
+        "i-row": "../../dist/row/index",
+        "i-col": "../../dist/col/index",
+        "popover": "/dist/popover/popover",
+        "popover-item": "/dist/popover/popover-item"
+    }
+}

@@ -1,0 +1,31 @@
+<view class='myC' style="width:{{viewWidth}}px;height:{{viewHeight}}px;">
+	<i-row class="iRow"><i-col span="24" i-class="iSpace"></i-col></i-row>
+	<i-row class="iRow">
+		<i-col span="8"><view class="userP"><image class='user' src="{{userImage}}"></image></view></i-col>
+		<i-col span="8"><view class="dfcP"><image class='dfc' src="{{dfcImage}}"></image></view></i-col>
+		<i-col span="8"><view class="dzpP"><image class='dzp' src="{{dzpIndexImage}}"></image></view></i-col>
+	</i-row>
+	<i-row class="iRow">
+		<i-col span="18"><view class="zhamenP"><image class='zhamen' src="{{zhamenImage}}" wx:if="{{isShowZhamen}}" style="position: relative;left:{{zhamenLeft}}%;top:{{zhamenTop}}px;"></image></view></i-col>
+		<i-col span="6"><view class="shareP"><button open-type="share" class="iconP2" animation="{{animation}}"><image class="btnImage" src="{{shareImage}}"></image></button></view></i-col>
+	</i-row>
+	<i-row class="iRow">
+		<i-col span="24"><view class="dabianP"><image class='dabian' src="{{dabianImage}}" wx:if="{{isShowDabian}}" style="position: relative;left:{{dabianLeft}}%;top:{{dabianTop}}px;"></image></view></i-col>
+	</i-row>
+</view>
+
+
+<image src="{{dogImage}}" style="width: {{dogWidth}}px;height:  {{dogHeight}}px;z-index: 1000;position: absolute;top: 50%;left:{{dogLeft}}px;"></image>
+
+
+
+<image class='mail' src="{{mailImage}}"></image>
+
+
+<popover id='popover'>
+			<popover-item>
+				<image class="collect" src="../../images/click.png"></image>点击
+				<image class="collect2" src="../../images/collect.png"></image>添加到我的小程序下次不会迷路
+				<image class="collect3" src="../../images/close.png" bindtap="hideCollect"></image>
+			</popover-item>
+	</popover>
