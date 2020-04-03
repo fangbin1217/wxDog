@@ -21,7 +21,7 @@ page{
 .user{
   width: 60px;
   height: 60px;
-  border-radius: 40;
+  border-radius: 40px;
   margin-top: 20px;
   margin-left: 10px;
 }
@@ -29,7 +29,6 @@ page{
 .userP{
   text-align: left;
   height: 100px;
-  border: 1px solid #000000;
 }
 
 .dfc{
@@ -42,8 +41,6 @@ page{
   align-items: center;
   justify-content: center;
   height: 100px;
-  border: 1px solid #000000;
-
 }
 
 .dzp{
@@ -56,12 +53,10 @@ page{
 .dzpP{
   text-align: right;
   height: 100px;
-  border: 1px solid #000000;
 }
 
 .zhamenP{
   height: 80px;
-  border: 1px solid #000000;
 }
 
 .zhamen{
@@ -72,7 +67,6 @@ page{
 .shareP{
   text-align: right;
   height: 80px;
-  border: 1px solid #000000;
 }
 
 .iconP2{
@@ -98,17 +92,48 @@ button::after{border:none}
 }
 
 .dabianP{
-  height: 60px;
-  border: 1px solid #000000;
+  height: 80px;
 }
 
 .mail{
-  width: 75px;
-  height: 56px;
-  z-index: 1;
-  position: absolute;
-  top: 75%;right:1%;
+  width: 80px;
+  height: 80px;
 }
+
+.mailP{
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.dogP{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.wanP{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottomImageP{
+  z-index: 50px;
+  background: rgba(0,0,0,0);
+  line-height:10px;
+  padding:0;
+  border:none;
+}
+
+.bottomImage {
+  width: 80px;
+  height:80px;
+}
+
 
 
   
@@ -131,4 +156,70 @@ button::after{border:none}
   height:30px;
   position: relative;
   top:5px;
+}
+
+.b1{position:fixed;z-index: 49; width:100%;height:100%;top:0px;background:rgba(0,0,0,0.6);overflow: hidden;}
+
+.progressTitle{
+  font-size: 16px;
+  font-weight: bold;
+  color:#000000;
+  text-align: center;
+}
+
+.progressContent{
+  font-size: 12px;
+  color:#000000;
+  text-align: center;
+}
+
+.xinqinP{
+  width:150px;
+  height:35px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background-color:#7FFF00;
+  border-radius:30px;
+  opacity: 0;
+  z-index:50;
+}
+
+.xinqinText{
+  font-size: 14px;
+  font-weight: bold;
+  color:#ffffff;
+}
+
+.xcxP{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.xcxImage{
+  text-align: center;
+  width: 50px;
+  height:50px;
+}
+
+.xcxName{
+  text-align: center;
+  font-size:13px;
+}
+
+.otherXcx{
+  z-index:900;
+  background-color:#FFFAFA;
+  border-radius: 10px;
+  margin:0 10px 0 10px;
+}
+
+.music{
+  position:absolute;
+  right:10px;
+  bottom: 150px;
+  width: 50px;
+  height:50px;
 }

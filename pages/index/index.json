@@ -4,6 +4,7 @@
         "i-row": "../../dist/row/index",
         "i-col": "../../dist/col/index",
         "popover": "/dist/popover/popover",
-        "popover-item": "/dist/popover/popover-item"
+        "popover-item": "/dist/popover/popover-item",
+        "i-progress": "../../dist/progress/index"
     }
 }

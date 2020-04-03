@@ -3,7 +3,7 @@
   background-color: white;
   box-shadow: 0 0 2px 2px #ddd;
   border-radius: 6rpx;
-  z-index: 100;
+  z-index: 48;
 }
 /* 实现三角形 */
 .popover-view::before {

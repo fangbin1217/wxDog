@@ -1,3 +1,4 @@
+<!--contain area-->
 <view class='myC' style="width:{{viewWidth}}px;height:{{viewHeight}}px;">
 	<i-row class="iRow"><i-col span="24" i-class="iSpace"></i-col></i-row>
 	<i-row class="iRow">
@@ -10,22 +11,65 @@
 		<i-col span="6"><view class="shareP"><button open-type="share" class="iconP2" animation="{{animation}}"><image class="btnImage" src="{{shareImage}}"></image></button></view></i-col>
 	</i-row>
 	<i-row class="iRow">
-		<i-col span="24"><view class="dabianP"><image class='dabian' src="{{dabianImage}}" wx:if="{{isShowDabian}}" style="position: relative;left:{{dabianLeft}}%;top:{{dabianTop}}px;"></image></view></i-col>
+		<i-col span="18"><view class="dabianP"><image class='dabian' src="{{dabianImage}}" wx:if="{{isShowDabian}}" style="position: relative;left:{{dabianLeft}}%;top:{{dabianTop}}px;"></image></view></i-col>
+		<i-col span="6"><view class="mailP"><image class='mail' src="{{mailImage}}"></image>
+</view></i-col>
+	</i-row>
+	<i-row class="iRow">
+		<i-col span="12"><button style="position:absolute;bottom:10px;left:20px;"  hover-class	="ui-share-hover" class='bottomImageP' bindtap="lin"><image class="bottomImage" src="{{bottomLinImage}}"></image></button></i-col>
+		<i-col span="12"><button style="position:absolute;bottom:10px;right:20px;"  hover-class	="ui-share-hover" class='bottomImageP' bindtap="wei"><image class="bottomImage" src="{{bottomWeiImage}}"></image></button></i-col>
 	</i-row>
 </view>
+<!--contain area-->
 
+<!--dog area-->
+<image bindtap="dogTap" src="{{dogImage}}" style="width:{{dogWidth}}px;height:{{dogHeight}}px;z-index: 1000;position:fixed;bottom:100px;left:{{dogLeft}}px;"></image>
+<!--dog wan area-->
+<image src="{{wanImage}}" style="position:fixed;bottom:20px;left:{{wanLeft}}px;width:120px;height:60px;"></image>
+<!--dog level area-->
+<view class="progress-item" style="width:60px;position:absolute;left:5px;bottom:{{progressBottom}}px;z-index:10;">
+		<view class="progressTitle">1级</view>
+    <i-progress percent="25" hide-info status="active" stroke-width="15"></i-progress>
+		<view class="progressContent"><text style="color:red;">12</text>/12345</view>
+</view>
+<view animation="{{xinqinData}}" class="xinqinP" style="position:absolute;bottom:{{xinqinBottom}}px;left:{{xinqinLeft}}px;">
+	<image src="{{dogSmallImage}}" style="width:30px;height:30px;"></image>
+	<view class="xinqinText">100/100（愉悦）</view>	
+</view>
+<!--dog area-->
 
-<image src="{{dogImage}}" style="width: {{dogWidth}}px;height:  {{dogHeight}}px;z-index: 1000;position: absolute;top: 50%;left:{{dogLeft}}px;"></image>
+<!--dog around icon area-->
+<image bindtap="dogRecord" src="{{recordIndexImage}}" animation="{{RecordData}}" style="opacity:0;z-index:900;width:60px;height:60px;position:absolute;bottom:{{recordBottom}}px;left:{{recordLeft}}px;"></image>
+<image bindtap="dogYifu" src="{{yifuIndexImage}}" animation="{{yifuData}}" style="opacity:0;z-index:900;width:60px;height:60px;position:absolute;bottom:{{yifuBottom}}px;left:{{yifuLeft}}px;"></image>
+<image src="{{glImage}}" animation="{{glData}}" style="opacity:0;z-index:900;width:60px;height:60px;position:absolute;bottom:{{glBottom}}px;left:{{glLeft}}px;"></image>
+<image src="{{orderImage}}" animation="{{orderData}}" style="opacity:0;z-index:900;width:60px;height:60px;position:absolute;bottom:{{orderBottom}}px;left:{{orderLeft}}px;"></image>
+<!--dog around icon area-->
 
-
-
-<image class='mail' src="{{mailImage}}"></image>
-
-
+<!--collect tip area-->
 <popover id='popover'>
-			<popover-item>
-				<image class="collect" src="../../images/click.png"></image>点击
-				<image class="collect2" src="../../images/collect.png"></image>添加到我的小程序下次不会迷路
-				<image class="collect3" src="../../images/close.png" bindtap="hideCollect"></image>
-			</popover-item>
-	</popover>
+		<popover-item>
+			<image class="collect" src="../../images/click.png"></image>点击
+			<image class="collect2" src="../../images/collect.png"></image>添加到我的小程序下次不会迷路
+			<image class="collect3" src="../../images/close.png" bindtap="hideCollect"></image>
+		</popover-item>
+</popover>
+<!--collect tip area-->
+
+<!-- other xcx area-->
+<view class="otherXcx" style="position:absolute;bottom:10px;width:{{viewWidth - 20}}px;" wx:if="{{dogState}}">
+	<i-row class="iRow">
+		<i-col span="{{xcxSpan}}" wx:for='{{xcxList}}' wx:key='unique'>
+			<view class="xcxP">
+				<image bindtap="jumpXcx" class="xcxImage" src="{{item.xcxImage}}" data-id="{{item.appid}}" data-path="{{item.path}}"></image>
+				<view class="xcxName">{{item.xcxName}}</view>
+			</view>
+</i-col>
+	</i-row>
+</view>
+<!-- other xcx area-->
+
+<image bindtap="startOrStopMusic" class='music' src="{{musicImage}}" animation="{{musicData}}"></image>
+
+<!--mask area-->
+<view class="b1" hidden="{{!dogState}}"></view>
+<!--mask area-->
