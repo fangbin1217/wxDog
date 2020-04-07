@@ -25,6 +25,16 @@
 </view>
 <i-row class="iRow"><i-col span="24" i-class="col-space2"></i-col></i-row>
 <i-row class="iRow">
+    <i-col span="12"><view class="myTitle2"><image class="moneyImage" src="{{moneyImage}}"></image>铜币（个）</view></i-col>
+    <i-col span="12"><view class="myTitle2"><image class="moneyImage" src="{{gutouImage}}"></image>饲料（克）</view></i-col>
+</i-row>
+<i-row class="iRow">
+    <i-col span="12"><view class="myValue2">0</view></i-col>
+    <i-col span="12"><view class="myValue2">0</view></i-col>
+</i-row>
+
+<i-row class="iRow"><i-col span="24" i-class="col-space2"></i-col></i-row>
+<i-row class="iRow">
     <i-col span="12"><view class="myTitle">背景音乐</view></i-col>
     <i-col span="12">
         <view class="myValue">
@@ -35,8 +45,22 @@
         </view>
     </i-col>
 </i-row>
-
-
 <i-row class="iRow"><i-col span="24" i-class="col-space2"></i-col></i-row>
+<i-row class="iRow" bindtap='aboutMe'>
+    <i-col span="3" i-class="iSecond"><image class='icon' src="{{orderImage}}"></image></i-col>
+    <i-col span="10" i-class="iThird"><view class="col-title">我的订单</view></i-col>
+    <i-col span="8" i-class="iSecond"></i-col>
+    <i-col span="3" i-class="iSecond"><image class='iYou' src="{{rightImage}}"></image></i-col>
+</i-row>
+<i-row class="iRow"><i-col span="24" i-class="col-space2"></i-col></i-row>
+<i-row class="iRow" bindtap='aboutMe'>
+    <i-col span="3" i-class="iSecond"><image class='icon' src="{{gyImage}}"></image></i-col>
+    <i-col span="10" i-class="iThird"><view class="col-title">关于我</view></i-col>
+    <i-col span="8" i-class="iSecond"></i-col>
+    <i-col span="3" i-class="iSecond"><image class='iYou' src="{{rightImage}}"></image></i-col>
+</i-row>
+<i-row class="iRow"><i-col span="24" i-class="col-space2"></i-col></i-row>
+
+
 
 

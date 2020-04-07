@@ -5,7 +5,12 @@ Page({
   data: {
     userInfo: null,
     defaultAvatar:'../../images/defaultAvatar.png',
-    switchValue : false
+    moneyImage: '../../images/money.png',
+    gutouImage: '../../images/gutou.png',
+    orderImage: '../../images/dingdan2.png',
+    rightImage: '../../images/right.png',
+    gyImage: '../../images/guanyu.png',
+    switchValue : true
   },
   onLoad: function (options) {
     this.indexInit();

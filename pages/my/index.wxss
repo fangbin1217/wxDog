@@ -73,9 +73,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50px;
+  height: 60px;
 }
 
+.moneyImage{
+  width: 32px;height:32px;
+}
 
 .iSecond {
   height: 60px;
@@ -111,4 +114,22 @@
   font-size:16px;
   background-color: #576B95;
   color: white;
+  border-radius: 30px;
+}
+
+.myTitle2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  font-size: 14px;
+  color: #80848f;
+}
+
+.myValue2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  font-size: 20px;
 }
