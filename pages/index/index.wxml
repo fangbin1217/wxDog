@@ -2,7 +2,7 @@
 <view class='myC' style="width:{{viewWidth}}px;height:{{viewHeight}}px;">
 	<i-row class="iRow"><i-col span="24" i-class="iSpace"></i-col></i-row>
 	<i-row class="iRow">
-		<i-col span="8"><view class="userP"><image class='user' src="{{userImage}}"></image></view></i-col>
+		<i-col span="8"><view class="userP"><image bindtap="myIndex" class='user' src="{{userImage}}"></image></view></i-col>
 		<i-col span="8"><view class="dfcP"><image class='dfc' src="{{dfcImage}}"></image></view></i-col>
 		<i-col span="8"><view class="dzpP"><image class='dzp' src="{{dzpIndexImage}}"></image></view></i-col>
 	</i-row>
@@ -48,9 +48,9 @@
 <!--collect tip area-->
 <popover id='popover'>
 		<popover-item>
-			<image class="collect" src="../../images/click.png"></image>点击
-			<image class="collect2" src="../../images/collect.png"></image>添加到我的小程序下次不会迷路
-			<image class="collect3" src="../../images/close.png" bindtap="hideCollect"></image>
+			<image class="collect" src="{{collectClick}}"></image>点击
+			<image class="collect2" src="{{collectImace}}"></image>添加到我的小程序下次不会迷路
+			<image class="collect3" src="{{collectClose}}" bindtap="hideCollect"></image>
 		</popover-item>
 </popover>
 <!--collect tip area-->
@@ -68,8 +68,32 @@
 </view>
 <!-- other xcx area-->
 
+<!-- bg music area-->
 <image bindtap="startOrStopMusic" class='music' src="{{musicImage}}" animation="{{musicData}}"></image>
+<!-- bg music area-->
+
+<!-- top tips area-->
+<i-message id="message" />
+<!-- top tips area-->
 
 <!--mask area-->
 <view class="b1" hidden="{{!dogState}}"></view>
 <!--mask area-->
+
+<!--lin left area-->
+<i-drawer mode="left" visible="{{showLeft}}" mask-closable="{{true}}">
+    
+	<view class="demo-container">
+		<image bindtap="toggleLeft" class="btnImageClose" src="{{leftCloseImage}}" style="position: relative;left:{{closeLeftBtn}}px;top:20px;"></image>
+		<movable-area class="desk" style="width:{{toggleWidth}}px;height:300px;background-size: 100% 100%;">
+      <movable-view class="iGridP" direction="vertical"  style="width:{{toggleWidth}}px;height:{{myH}}px;padding-top:10px;" bindchange="myMove" y="{{y}}" inertia="true" out-of-bounds="true" friction="{{friction}}" damping="{{damping}}"> 
+        		<view  wx:for='{{taskList}}' wx:key='unique' class="toggleV" style="width:{{toggleWidth - 40}}px;">
+							<view class="toggleContent">{{item.content}}</view>
+							<i-button i-class="toggleBtn" bind:click="doTask" type="success" shape="circle" inline="true" value="{{item.task_id}}">{{item.btn_name}}</i-button>
+						</view>
+      </movable-view>
+    </movable-area>
+	</view>
+
+  </i-drawer>
+	<!--lin left area-->

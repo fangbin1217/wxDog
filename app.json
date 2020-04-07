@@ -1,6 +1,7 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/my/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -10,8 +11,8 @@
     "navigationStyle": "custom"
   },
   "networkTimeout": {
-    "request": 10000,
-    "downloadFile": 10000
+    "request": 15000,
+    "downloadFile": 15000
   },
   "debug": true,
   "navigateToMiniProgramAppIdList": [

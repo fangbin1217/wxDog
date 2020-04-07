@@ -1,0 +1,42 @@
+<i-row class="iRow"><i-col span="24" i-class="col-space2"></i-col></i-row>
+<view wx:if="{{userInfo && userInfo.isLogin}}">
+    <i-row class="iRow">
+        <i-col span="8" i-class="iFirst">
+        <view class='viewP'><image class="iAvatar" src="{{userInfo.avatarUrl}}"></image></view>
+        </i-col>
+        <i-col span="16" i-class="iFirst">
+        <view class="viewP">{{userInfo.nickName}}</view>
+        </i-col>
+    </i-row>
+</view>
+<view wx:else>
+    <i-row class="iRow">
+        <i-col span="12" i-class="iFirst">
+        <view class='viewP'>
+            <image class="iAvatar" src="{{defaultAvatar}}"></image>
+        </view>
+        </i-col>
+        <i-col span="12" i-class="iFirst">
+        <view class='viewP2'>
+            <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="getWxInfo" class="iLoginBtn" hover-class='ui-share-hover'>登录</button>
+        </view>
+        </i-col>
+    </i-row>
+</view>
+<i-row class="iRow"><i-col span="24" i-class="col-space2"></i-col></i-row>
+<i-row class="iRow">
+    <i-col span="12"><view class="myTitle">背景音乐</view></i-col>
+    <i-col span="12">
+        <view class="myValue">
+            <i-switch value="{{switchValue}}" size="large" bind:change="switchChange" slot="footer">
+                <view slot="open">开启</view>
+                <view slot="close">关闭</view>
+            </i-switch>
+        </view>
+    </i-col>
+</i-row>
+
+
+<i-row class="iRow"><i-col span="24" i-class="col-space2"></i-col></i-row>
+
+

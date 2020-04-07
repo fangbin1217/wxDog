@@ -1,7 +1,7 @@
 const app = getApp();
 const updateManager = wx.getUpdateManager();
-// 在页面中定义视频广告
-var videoAd = null;
+const { $Message } = require('../../dist/base/index');
+
 Page({
     /**
      * 页面的初始数据
@@ -30,6 +30,11 @@ Page({
         orderImage: '../../images/order.png',
         dogSmallImage: '../../images/dogSmall100.png',
         musicImage: '../../images/music.png',
+        leftCloseImage: '../../images/close2.png',
+        collectClose: '../../images/close.png',
+        collectImage:'../../images/collect.png',
+        collectClick: '../../images/click.png',
+        showLeft: false,
         timerNum:0,
         myTimer1:null,
         animation: {},
@@ -39,7 +44,18 @@ Page({
         orderData: {},
         dogState: false,
         dogLeft: 70,
-        bgMusicBtn: true
+        bgMusicBtn: true,
+        myH:10000,
+        y:0,
+        friction: 5,
+        damping: 40,
+    },
+
+    toggleLeft: function() {
+      this.setData({
+        y:0,
+        showLeft: !this.data.showLeft
+      });
     },
 
   onReady: function () {  
@@ -59,6 +75,12 @@ Page({
     var audioSrc2 = app.globalData.imgHost + 'music/voiceChuan0404.mp3';
     this.audioCtx2.src = audioSrc2;
     this.audioCtx2.loop = false;
+
+    //背景音乐
+    this.audioCtx3 = wx.createInnerAudioContext('audioCtx');
+    var audioSrc3 = app.globalData.imgHost + 'music/bgMusic001.mp3';
+    this.audioCtx3.src = audioSrc3;
+    this.audioCtx3.loop = true;
     
 
     this.animationRecord = wx.createAnimation({
@@ -104,6 +126,7 @@ Page({
     this.isBgMusic = true; 
     if (this.data.bgMusicBtn) { 
       this.startAnimationInterval();
+      this.audioCtx3.play();
     }
 
     var xcxList = [
@@ -116,8 +139,57 @@ Page({
       xcxList : xcxList,
       xcxSpan: xcxSpan
     });
+
+    this.topDataList = [{name:'aaa', content:'测试1'},{name:'bbb', content:'测试2'}];
+    this.myTime = 0;
+    this.tipCount = this.topDataList.length - 1;
+    var that = this;
+    this.tipTimer = 0;
+    if (this.tipCount > 0) {
+      if (this.tipTimer > 0) {
+        clearInterval(this.tipTimer);
+      }
+      this.tipTimer = setInterval(function(){
+        if (that.myTime <= that.tipCount) {
+          $Message({
+            content: that.topDataList[that.myTime].name + ' ' + that.topDataList[that.myTime].content,
+            duration: 3,
+            //type: 'success'
+          });
+          that.myTime++;
+        } else {
+          console.log(that.myTime)
+          clearInterval(that.tipTimer);
+        }
+      }, 5000);
+    }
+
+    //任务
+    var task_list = [
+      {task_id:"1", btn_name:"签到", "content":"完成每日签到+50铜币"},
+      {task_id:"2", btn_name:"领取", "content":"完成首次邀请新用户+100铜币"},
+      {task_id:"1", btn_name:"签到", "content":"完成每日签到+50铜币"},
+      {task_id:"2", btn_name:"领取", "content":"完成首次邀请新用户+100铜币"},
+      {task_id:"1", btn_name:"签到", "content":"完成每日签到+50铜币"},
+      {task_id:"2", btn_name:"领取", "content":"完成首次邀请新用户+100铜币"},
+      {task_id:"1", btn_name:"签到", "content":"完成每日签到+50铜币"},
+      {task_id:"2", btn_name:"领取", "content":"完成首次邀请新用户+100铜币"},
+      {task_id:"1", btn_name:"签到", "content":"完成每日签到+50铜币"},
+      {task_id:"2", btn_name:"领取", "content":"完成首次邀请新用户+100铜币"},
+      {task_id:"1", btn_name:"签到", "content":"完成每日签到+50铜币"},
+      {task_id:"2", btn_name:"领取", "content":"完成首次邀请新用户+100铜币"}
+    ];
+    var myH = 55 * (task_list.length + 1);
+    this.setData({
+      taskList: task_list,
+      myH: myH
+    });
   },
 
+  myMove: function(e) {
+    var move = e.detail.y;
+    //console.log(move);
+  },
 
   /**
    * 实现image旋转动画，每次旋转 120*n度
@@ -156,10 +228,13 @@ Page({
         console.log('stop');
         this.stopAnimationInterval();
         this.isBgMusic = false;
+
+        this.audioCtx3.pause();
       } else {
         console.log('start');
         this.startAnimationInterval();
         this.isBgMusic = true;
+        this.audioCtx3.play();
       }
     }
   },
@@ -274,6 +349,8 @@ Page({
         var orderBottom = bottomConst + dogWidth/2 - recordWidth/2;
         var orderLeft = that.data.dogLeft + dogWidth/2 - recordWidth/2;
         var wanLeft = (windowWidth - wanWidth)/2;
+        var toggleWidth = parseInt(windowWidth - 30);
+        var closeLeftBtn = toggleWidth - 20;
         that.setData({
           viewWidth: windowWidth,
           viewHeight: viewHeight,
@@ -296,7 +373,9 @@ Page({
           orderBottom: glBottom,
           orderLeft: glLeft,
           wanLeft: wanLeft,
-          progressBottom: dogWidth
+          progressBottom: dogWidth,
+          toggleWidth: toggleWidth,
+          closeLeftBtn: closeLeftBtn
         });
       }
     });
@@ -304,7 +383,7 @@ Page({
   },
 
   lin: function(e) {
-    console.log(1);
+    this.toggleLeft();
   },
 
   wei: function(e) {
@@ -374,7 +453,6 @@ Page({
       app.globalData.isFlush = false;
       this.initIndex();
     }
-
   },
 
   mySupports: function () {
@@ -448,23 +526,32 @@ Page({
     })
   },
 
+  myIndex: function() {
+    if (this.tipTimer > 0) {
+      clearInterval(this.tipTimer);
+    }
+    wx.navigateTo({
+      url: '/pages/my/index'
+    });
+  },
+
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
     var that = this;
-    var shareImage = app.globalData.imgHost + 'wxwheel/share0315.png';
-    var shareTitle = '云养狗狗，完成任务饲养小狗，还有狗狗布娃娃，靠枕，快来开启您的领养之旅！';
-    var path = '/pages/index/index';
+    var shareImage = app.globalData.imgHost + 'index/share0407.png';
+    var shareTitle = '云养狗狗，快来领养您的宠物狗狗！';
+    var path = '/pages/index/index?from_uid=0';
     if (app.globalData.userInfo) {
       shareImage = app.globalData.userInfo.shareImage;
       shareTitle = app.globalData.userInfo.shareTitle;
-      path = '/pages/index/index?from_uid=' + app.globalData.userInfo.uid;
+      path = '/pages/index/index?share_uid=' + app.globalData.userInfo.uid;
     }
     return {
-      title: app.globalData.shareTitle, //转发的标题。当前小程序名称
+      title: shareTitle, //转发的标题。当前小程序名称
       path: path, //转发的路径
-      imageUrl: app.globalData.shareImage, //自定义图片路径 支持PNG及JPG。显示图片长宽比是 5:4
+      imageUrl: shareImage, //自定义图片路径 支持PNG及JPG。显示图片长宽比是 5:4
       success: function(e) {
         
       }

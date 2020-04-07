@@ -1,0 +1,114 @@
+
+
+.iCont{
+  background-color: #f8f8f9;
+}
+
+.col-space1{
+  background-color: #f8f8f9;
+  height:8px;
+}
+
+.col-space{
+  background-color: #f8f8f9;
+  height:16px;
+}
+
+.col-space2{
+  background-color: #f8f8f9;
+  height:1px;
+}
+
+.col-title{
+  font-size: 20px;
+  color: #576B95;
+}
+
+.col-value{
+  font-size:20px;
+}
+
+.iAvatar{
+  width:80px;height:80px;
+  border-radius: 5px;
+}
+
+.iYou{
+  width:25px;height:25px;
+}
+
+.hover_grey{
+  background-color: #f8f8f9;
+}
+
+.iFirst {
+  height: 100px;
+  background-color: #ffffff;
+}
+
+.viewP {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+.viewP2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+.myTitle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  font-size: 18px;
+  color: #80848f;
+}
+
+.myValue{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+
+
+.iSecond {
+  height: 60px;
+  background-color: #ffffff;
+  padding-top: 15px;
+  padding-left: 10px;
+}
+
+.iThird{
+  height: 60px;
+  background-color: #ffffff;
+  padding-top: 15px;
+  text-align: left;
+}
+
+.iNickname{
+  font-size: 24px;
+  color: #495060;
+}
+
+.nameP{
+    padding-top:28px;
+}
+
+.icon {
+  width:30px;height:30px;
+  border-radius: 5rpx;
+}
+
+.iLoginBtn{
+  width: 80px;
+  height:40px;
+  font-size:16px;
+  background-color: #576B95;
+  color: white;
+}

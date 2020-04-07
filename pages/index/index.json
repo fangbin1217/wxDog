@@ -5,6 +5,9 @@
         "i-col": "../../dist/col/index",
         "popover": "/dist/popover/popover",
         "popover-item": "/dist/popover/popover-item",
-        "i-progress": "../../dist/progress/index"
+        "i-progress": "../../dist/progress/index",
+        "i-message": "../../dist/message/index",
+        "i-button": "../../dist/button/index",
+        "i-drawer": "../../dist/drawer/index"
     }
 }
