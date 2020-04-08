@@ -240,11 +240,11 @@ Page({
   },
 
 
-  dogRecord: function (e) {
+  dogRecord: function () {
     console.log('dog record')
   },
 
-  dogTap: function (e) {
+  dogTap: function () {
 
     var maxLen = this.data.dogLeft + this.data.dogWidth/2 - 30 - 10;
     var maxXinqinLen = -(100 + this.data.dogWidth/2 - 30) - 30;
@@ -538,6 +538,9 @@ Page({
   dogYifu: function() {
     if (this.tipTimer > 0) {
       clearInterval(this.tipTimer);
+    }
+    if (this.data.dogState) {
+      this.dogTap();
     }
     wx.navigateTo({
       url: '/pages/dog/index'
