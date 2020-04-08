@@ -29,3 +29,64 @@
       <button wx:else class="iBtn" disabled="true">装扮</button>
     </view></i-col>
 </i-row>
+<i-row class="iRow"><i-col span="24" i-class="col-space2"></i-col></i-row>
+<view wx:for='{{cateList}}' wx:key='unique'>
+  <i-row class="iRow">
+      <i-col span="12" i-class="iFirst">
+        <view class='myTitle3'><image class="cateImage" src="{{item.bigImage}}"></image></view>
+      </i-col>
+      <i-col span="12" i-class="iFirst">
+        <view class="myValue3">
+          <view class="cateName">{{item.title}}</view>
+        </view>
+      </i-col>
+  </i-row>
+  <i-row class="iRow">
+    <i-col span="24">
+      <view class="myTitle4">兑换条件</view>
+    </i-col>
+  </i-row>
+  <i-row class="iRow">
+    <i-col span="8">
+      <view class="myTitle5">等级至少</view>
+    </i-col>
+    <i-col span="8">
+      <view class="myTitle5">邀请人数</view>
+    </i-col>
+    <i-col span="8">
+      <view class="myTitle5">狗狗品种卡</view>
+    </i-col>
+  </i-row>
+  <i-row class="iRow">
+    <i-col span="8">
+      <view class="myTitle5">{{item.minLevel}}级</view>
+    </i-col>
+    <i-col span="8">
+      <view class="myTitle5"><text style="color:#ed3f14;">{{item.totalYqCounts}}</text>/{{item.minYqCounts}}</view>
+    </i-col>
+    <i-col span="8">
+      <view class="myTitle5"><image class="cateSmallImage" src="{{item.smallImage}}"></image></view>
+    </i-col>
+  </i-row>
+  <i-row class="iRow">
+    <i-col span="8">
+      <view class="myTitle5">
+        <i-radio value="" disabled="{{true}}" checked="{{item.isLevel}}"></i-radio>
+      </view>
+    </i-col>
+    <i-col span="8">
+      <view class="myTitle5"><i-radio value="" disabled="{{true}}" checked="{{item.isCounts}}"></i-radio></view>
+    </i-col>
+    <i-col span="8">
+      <view class="myTitle5"><i-radio value="" disabled="{{true}}" checked="{{item.isCate}}"></i-radio></view>
+    </i-col>
+  </i-row>
+  <i-row class="iRow">
+    <i-col span="24">
+      <view class="myTitle5">
+        <button  wx:if="{{item.isAll}}" class="iBtn2" style="width:{{viewWidth - 40}}px;background-color: #09BB07;color: white;" hover-class='ui-share-hover'>兑换</button>
+        <button  wx:else class="iBtn2" style="width:{{viewWidth - 40}}px;" disabled="true">兑换</button>
+      </view>
+    </i-col>
+  </i-row>
+</view>

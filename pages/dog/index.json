@@ -3,6 +3,8 @@
   "navigationStyle": "default",
   "usingComponents": {
     "i-row": "../../dist/row/index",
-    "i-col": "../../dist/col/index"
+    "i-col": "../../dist/col/index",
+    "i-radio-group": "../../dist/radio-group/index",
+    "i-radio": "../../dist/radio/index"
   }
 }

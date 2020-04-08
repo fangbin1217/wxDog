@@ -4,6 +4,7 @@ const app = getApp();
 Page({
   data: {
     userInfo: null,
+    viewWidth: 414,
     rightImage: '../../images/right.png',
     editImage: '../../images/edit.png',
     loveImage: '../../images/love.png',
@@ -14,6 +15,16 @@ Page({
     jsImage: '../../images/js_small0408.png'
   },
   onLoad: function (options) {
+
+    var that = this;
+    wx.getSystemInfo({
+      success: function (res) {
+        var viewWidth = res.windowWidth;
+        that.setData({
+          viewWidth: viewWidth
+        });
+      }
+    });
     this.indexInit();
   },
 
@@ -37,8 +48,13 @@ Page({
       {daojuId: 4, title: '帽子道具卡', image: app.globalData.imgHost + 'index/js_small0408.png', counts: 0}
     ];
 
+    var cateList = [
+      {cateId: 5, title: '泰迪犬', smallImage: app.globalData.imgHost + 'index/taidi_small0408.png', bigImage: app.globalData.imgHost + 'index/taidi_big0409.png', totalYqCounts:14, minYqCounts: 50, minLevel: 60, isLevel: false, isCounts: false, isCate:true, isAll: true}
+    ];
+
     this.setData({
-      daojuList: daojuList
+      daojuList: daojuList,
+      cateList: cateList
     });
     
   }
