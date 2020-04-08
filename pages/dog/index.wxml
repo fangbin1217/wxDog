@@ -11,11 +11,15 @@
 </i-row>
 <i-row class="iRow"><i-col span="24" i-class="col-space2"></i-col></i-row>
 <i-row class="iRow">
-    <i-col span="12"><view class="myTitle2"><image class="loveImage" src="{{loveImage}}"></image>心情值</view></i-col>
+    <i-col span="12"><view class="myTitle2"><image class="loveImage" src="{{loveImage}}"></image>心情</view></i-col>
     <i-col span="12"><view class="myTitle2"><image class="loveImage" src="{{yqImage}}"></image>邀请人数</view></i-col>
 </i-row>
 <i-row class="iRow">
-    <i-col span="12"><view class="myValue2">0</view></i-col>
+    <i-col span="12"><view class="myValue2">
+      <image wx:if="{{dogXqValue >= 80}}" class="bqImage" src="{{bqImage1}}"></image>
+      <image wx:elif="{{dogXqValue < 60}}" class="bqImage" src="{{bqImage3}}"></image>
+      <image wx:else class="bqImage" src="{{bqImage2}}"></image>
+    </view></i-col>
     <i-col span="12"><view class="myValue2">0</view></i-col>
 </i-row>
 <i-row class="iRow"><i-col span="24" i-class="col-space2"></i-col></i-row>
@@ -24,10 +28,13 @@
     <i-col span="6"><view class="myTitle firstTitle">{{item.title}}</view></i-col>
     <i-col span="2"><view class="myTitle">*</view></i-col>
     <i-col span="2"><view class="myTitle myValue">{{item.counts}}</view></i-col>
-    <i-col span="8"><view class="myTitle">
-      <button wx:if="{{item.counts > 0}}" class="iBtn" style="background-color: #09BB07;color: white;" hover-class='ui-share-hover'>装扮</button>
-      <button wx:else class="iBtn" disabled="true">装扮</button>
-    </view></i-col>
+    <i-col span="8">
+      <view class="myTitle" wx:if="{{item.counts > 0}}">
+        <button wx:if="{{item.isWear}}" class="iBtn" style="background-color: #09BB07;color: white;" hover-class='ui-share-hover'>卸装</button>
+        <button wx:else class="iBtn" style="background-color: #09BB07;color: white;" hover-class='ui-share-hover'>装扮</button>
+      </view>
+      <view class="myTitle" wx:else><button class="iBtn" disabled="true">装扮</button></view>
+    </i-col>
 </i-row>
 <i-row class="iRow"><i-col span="24" i-class="col-space2"></i-col></i-row>
 <view wx:for='{{cateList}}' wx:key='unique'>
@@ -90,3 +97,8 @@
     </i-col>
   </i-row>
 </view>
+<i-row class="iRow"><i-col span="24" i-class="col-space2"></i-col></i-row>
+<i-row class="iRow"><i-col span="24"><view class="tipValue">1、加速道具卡装扮后，可加快狗狗进食时间噢</view></i-col></i-row>
+<i-row class="iRow"><i-col span="24"><view class="tipValue">2、心情影响经验加成（大于80开心，小于60难过）</view></i-col></i-row>
+<i-row class="iRow"><i-col span="24"><view class="tipValue">3、狗狗品种卡可以用碎片合成，快去收集吧</view></i-col></i-row>
+<i-row class="iRow"><i-col span="24"><view class="tipValue">4、更多狗狗品种-------------敬请期待</view></i-col></i-row>

@@ -49,9 +49,9 @@
 <!--collect tip area-->
 <popover id='popover'>
 		<popover-item>
-			<image class="collect" src="{{collectClick}}"></image>点击
-			<image class="collect2" src="{{collectImace}}"></image>添加到我的小程序下次不会迷路
 			<image class="collect3" src="{{collectClose}}" bindtap="hideCollect"></image>
+			<image class="collect" src="{{collectClick}}"></image>点击
+			<image class="collect2" src="{{collectImage}}"></image>添加到我的小程序下次不会迷路
 		</popover-item>
 </popover>
 <!--collect tip area-->
