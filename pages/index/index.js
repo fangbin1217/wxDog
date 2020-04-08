@@ -535,6 +535,15 @@ Page({
     });
   },
 
+  dogYifu: function() {
+    if (this.tipTimer > 0) {
+      clearInterval(this.tipTimer);
+    }
+    wx.navigateTo({
+      url: '/pages/dog/index'
+    });
+  },
+
   /**
    * 用户点击右上角分享
    */

@@ -1,0 +1,100 @@
+.col-space2{
+  background-color: #f8f8f9;
+  height:1px;
+}
+
+.dogImage{
+  width:120px;height:120px;
+  border-radius: 5px;
+}
+
+.editImage{
+  width:20px;height:20px;
+  position: relative;
+  top:5px;
+}
+
+.loveImage{
+  width:20px;height:20px;
+}
+
+.hatImage{
+  width:50px;height:30px;
+}
+
+
+.myTitle2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  font-size: 14px;
+  color: #80848f;
+}
+
+.myValue2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  font-size: 20px;
+}
+
+.iYou{
+  width:25px;height:25px;
+}
+
+.hover_grey{
+  background-color: #f8f8f9;
+}
+
+.iFirst {
+  height: 140px;
+  background-color: #ffffff;
+}
+
+.viewP {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 140px;
+}
+
+.viewP2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 140px;
+}
+
+.dogLevel{
+  font-size: 20px;
+  color: #495060;
+}
+
+.dogName{
+  font-size: 16px;
+  color:#576B95;
+}
+
+.iBtn{
+  width: 60px;
+  height:25px;
+  font-size:13px;
+  border-radius: 30px;
+  line-height: 25px;
+}
+
+.myTitle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  color: #80848f;
+}
+
+.myValue{
+  color:#ed3f14;
+  font-size: 20px;
+}

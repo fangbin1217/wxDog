@@ -1,0 +1,31 @@
+<i-row class="iRow">
+    <i-col span="12" i-class="iFirst">
+    <view class='viewP'><image class="dogImage" src="{{dogImage}}"></image></view>
+    </i-col>
+    <i-col span="12" i-class="iFirst">
+      <view class="viewP2">
+        <view class="dogLevel">1级</view>
+        <view class="dogName">我的流浪狗<image class="editImage" src="{{editImage}}"></image></view>
+      </view>
+    </i-col>
+</i-row>
+<i-row class="iRow"><i-col span="24" i-class="col-space2"></i-col></i-row>
+<i-row class="iRow">
+    <i-col span="12"><view class="myTitle2"><image class="loveImage" src="{{loveImage}}"></image>心情值</view></i-col>
+    <i-col span="12"><view class="myTitle2"><image class="loveImage" src="{{yqImage}}"></image>邀请人数</view></i-col>
+</i-row>
+<i-row class="iRow">
+    <i-col span="12"><view class="myValue2">0</view></i-col>
+    <i-col span="12"><view class="myValue2">0</view></i-col>
+</i-row>
+<i-row class="iRow"><i-col span="24" i-class="col-space2"></i-col></i-row>
+<i-row class="iRow" wx:for='{{daojuList}}' wx:key='unique'>
+    <i-col span="6"><view class="myTitle"><image class="hatImage" src="{{item.image}}"></image></view></i-col>
+    <i-col span="6"><view class="myTitle firstTitle">{{item.title}}</view></i-col>
+    <i-col span="2"><view class="myTitle">*</view></i-col>
+    <i-col span="2"><view class="myTitle myValue">{{item.counts}}</view></i-col>
+    <i-col span="8"><view class="myTitle">
+      <button wx:if="{{item.counts > 0}}" class="iBtn" style="background-color: #09BB07;color: white;" hover-class='ui-share-hover'>装扮</button>
+      <button wx:else class="iBtn" disabled="true">装扮</button>
+    </view></i-col>
+</i-row>

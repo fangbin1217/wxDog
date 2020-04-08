@@ -255,3 +255,11 @@ button::after{border:none}
   background-image:url(https://img.hzmulou.com/index/indexBg0215.png);
   overflow:hidden;
 }
+
+.iTaskBtn{
+  width: 60px;
+  font-size:16px;
+  background-color: #09BB07;
+  color: white;
+  border-radius: 30px;
+}

@@ -26,7 +26,7 @@ Page({
 
   onShow: function(e) {
     
-    if (!this.data.userInfo && app.globalData.userInfo) {
+    if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
       });

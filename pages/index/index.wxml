@@ -27,10 +27,11 @@
 <!--dog wan area-->
 <image src="{{wanImage}}" style="position:fixed;bottom:20px;left:{{wanLeft}}px;width:120px;height:60px;"></image>
 <!--dog level area-->
-<view class="progress-item" style="width:60px;position:absolute;left:5px;bottom:{{progressBottom}}px;z-index:10;">
+<view bindtap="dogYifu" class="progress-item" style="width:60px;position:absolute;left:5px;bottom:{{progressBottom}}px;z-index:10;">
 		<view class="progressTitle">1级</view>
     <i-progress percent="25" hide-info status="active" stroke-width="15"></i-progress>
 		<view class="progressContent"><text style="color:red;">12</text>/12345</view>
+		<view class="progressContent">流浪小狗狗</view>
 </view>
 <view animation="{{xinqinData}}" class="xinqinP" style="position:absolute;bottom:{{xinqinBottom}}px;left:{{xinqinLeft}}px;">
 	<image src="{{dogSmallImage}}" style="width:30px;height:30px;"></image>
