@@ -8,7 +8,7 @@ App({
     imgHost: 'https://img.hzmulou.com/',
     image_warning: '../../images/Warning.png',
     isFlush:false,
-    version: '2.0.0'
+    version: '1.0.0'
   },
   
   onLaunch: function () {

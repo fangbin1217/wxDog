@@ -1,0 +1,60 @@
+.col-space2{
+  background-color: #f8f8f9;
+  height:1px;
+}
+
+.col-space{
+  height:20px;
+}
+
+.customerImage{
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+}
+
+.customerImageP{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+}
+
+.aboutTitle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  font-size: 20;
+  color: #1c2438;
+  font-weight: bold;
+}
+
+.aboutValue{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  font-size: 14;
+  color: #80848f;
+}
+
+.homeImage{
+  width: 32px;height: 32px;
+}
+
+.iLoginBtn{
+  width: 90%;
+  height:40px;
+  font-size:16px;
+  background-color: #09BB07;
+  color: white;
+  border-radius: 30px;
+}
+
+.aboutTitle2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}

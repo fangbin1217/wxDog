@@ -8,6 +8,7 @@
         "i-progress": "../../dist/progress/index",
         "i-message": "../../dist/message/index",
         "i-button": "../../dist/button/index",
-        "i-drawer": "../../dist/drawer/index"
+        "i-drawer": "../../dist/drawer/index",
+        "i-badge": "../../dist/badge/index"
     }
 }

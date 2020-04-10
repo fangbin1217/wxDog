@@ -52,7 +52,7 @@ Page({
     ];
 
     var cateList = [
-      {cateId: 5, title: '泰迪犬', smallImage: app.globalData.imgHost + 'index/taidi_small0408.png', bigImage: app.globalData.imgHost + 'index/taidi_big0409.png', totalYqCounts:14, minYqCounts: 50, minLevel: 60, isLevel: false, isCounts: false, isCate:true, isAll: true}
+      {cateId: 5, title: '泰迪犬', smallImage: app.globalData.imgHost + 'index/taidi_small0408.png', bigImage: app.globalData.imgHost + 'index/taidi_big0409.png', totalYqCounts:14, minYqCounts: 50, minLevel: 60, isLevel: false, isCounts: false, isCate:true, isAll: true, daojuName: '泰迪品种卡'}
     ];
 
     this.setData({

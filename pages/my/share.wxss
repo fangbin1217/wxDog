@@ -1,0 +1,39 @@
+.iLoginBtn{
+  width: 90%;
+  height:40px;
+  font-size:16px;
+  background-color: #09BB07;
+  color: white;
+  border-radius: 30px;
+}
+
+.col-space2{
+  background-color: #f8f8f9;
+  height:1px;
+}
+
+.col-space{
+  height:20px;
+}
+
+.aboutTitle1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  font-size: 18px;
+  color:#ed3f14;
+}
+
+.aboutTitle2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+
+.aboutTitle3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

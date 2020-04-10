@@ -17,7 +17,12 @@
 	</i-row>
 	<i-row class="iRow">
 		<i-col span="12"><button style="position:absolute;bottom:10px;left:20px;"  hover-class	="ui-share-hover" class='bottomImageP' bindtap="lin"><image class="bottomImage" src="{{bottomLinImage}}"></image></button></i-col>
-		<i-col span="12"><button style="position:absolute;bottom:10px;right:20px;"  hover-class	="ui-share-hover" class='bottomImageP' bindtap="wei"><image class="bottomImage" src="{{bottomWeiImage}}"></image></button></i-col>
+		<i-col span="12">
+			
+			<view style="position:absolute;bottom:10px;right:20px;" bindtap="wei"><i-badge count="999" overflow-count="9999">
+			<button   hover-class	="ui-share-hover" class='bottomImageP'><image class="bottomImage" src="{{bottomWeiImage}}"></image></button>
+			</i-badge></view>
+		</i-col>
 	</i-row>
 </view>
 <!--contain area-->
@@ -26,6 +31,9 @@
 <image bindtap="dogTap" src="{{dogImage}}" style="width:{{dogWidth}}px;height:{{dogHeight}}px;z-index: 1000;position:fixed;bottom:100px;left:{{dogLeft}}px;"></image>
 <!--dog wan area-->
 <image src="{{wanImage}}" style="position:fixed;bottom:20px;left:{{wanLeft}}px;width:120px;height:60px;"></image>
+<!--dog eat area-->
+<image wx:if="{{isEating}}" src="{{eatImage}}" style="position:fixed;bottom:40px;left:{{wanLeft}}px;width:120px;height:50px;z-index:50;"></image>
+
 <!--dog level area-->
 <view bindtap="dogYifu" class="progress-item" style="width:60px;position:absolute;left:5px;bottom:{{progressBottom}}px;z-index:10;">
 		<view class="progressTitle">1级</view>
@@ -80,6 +88,10 @@
 <!--mask area-->
 <view class="b1" hidden="{{!dogState}}"></view>
 <!--mask area-->
+
+<!-- shop area-->
+<image bindtap="shopIndex" style="width:60px;height:80px;position:absolute;left:5px;bottom:{{shopBottom}}px;z-index:10;" src="{{shopImage}}"></image>
+<!-- shop area-->
 
 <!--lin left area-->
 <i-drawer mode="left" visible="{{showLeft}}" mask-closable="{{true}}">

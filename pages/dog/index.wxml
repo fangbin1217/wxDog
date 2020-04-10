@@ -61,7 +61,7 @@
       <view class="myTitle5">邀请人数</view>
     </i-col>
     <i-col span="8">
-      <view class="myTitle5">狗狗品种卡</view>
+      <view class="myTitle5">{{item.daojuName}}</view>
     </i-col>
   </i-row>
   <i-row class="iRow">
@@ -96,9 +96,18 @@
       </view>
     </i-col>
   </i-row>
+  <i-row class="iRow"><i-col span="24" i-class="col-space"></i-col></i-row>
+  <i-row class="iRow"><i-col span="24"><view class="daojuName">我还没有{{item.daojuName}}，马上去收集！</view></i-col></i-row>
 </view>
 <i-row class="iRow"><i-col span="24" i-class="col-space2"></i-col></i-row>
+<i-row class="iRow"><i-col span="24" i-class="col-space"></i-col></i-row>
+<i-row class="iRow">
+    <i-col span="24">
+      <view class="myTitle10">狗狗说明</view>
+    </i-col>
+  </i-row>
 <i-row class="iRow"><i-col span="24"><view class="tipValue">1、加速道具卡装扮后，可加快狗狗进食时间噢</view></i-col></i-row>
 <i-row class="iRow"><i-col span="24"><view class="tipValue">2、心情影响经验加成（大于80开心，小于60难过）</view></i-col></i-row>
 <i-row class="iRow"><i-col span="24"><view class="tipValue">3、狗狗品种卡可以用碎片合成，快去收集吧</view></i-col></i-row>
-<i-row class="iRow"><i-col span="24"><view class="tipValue">4、更多狗狗品种-------------敬请期待</view></i-col></i-row>
+<i-row class="iRow"><i-col span="24"><view class="tipValue">4、每个用户只能合成品种卡限领养一只狗狗</view></i-col></i-row>
+<i-row class="iRow"><i-col span="24"><view class="tipValue">5、更多狗狗品种-------------敬请期待</view></i-col></i-row>

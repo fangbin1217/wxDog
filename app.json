@@ -2,7 +2,10 @@
   "pages": [
     "pages/index/index",
     "pages/my/index",
-    "pages/dog/index"
+    "pages/my/share",
+    "pages/my/about",
+    "pages/dog/index",
+    "pages/shop/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

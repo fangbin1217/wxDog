@@ -3,6 +3,10 @@
   height:1px;
 }
 
+.col-space{
+  height:15px;
+}
+
 .dogImage{
   width:120px;height:120px;
   border-radius: 5px;
@@ -28,6 +32,8 @@
 
 .cateSmallImage{
   width:50px;height:50px;
+  border: 1px solid #e9eaec;
+  border-radius: 5px;
 }
 
 .bqImage{
@@ -42,6 +48,15 @@
   height: 30px;
   font-size: 14px;
   color: #80848f;
+}
+
+.daojuName{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  font-size: 18px;
+  color: #576B95;
 }
 
 .myValue2{
@@ -163,4 +178,13 @@
   height:30px;
   line-height: 30px;
   margin-left: 10px;
+}
+
+.myTitle10{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #ed3f14;
+  height:30px;
 }

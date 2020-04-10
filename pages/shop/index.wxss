@@ -1,0 +1,57 @@
+.shopImage{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.iCol{
+  height:60px;
+}
+
+.col-space2{
+  background-color: #f8f8f9;
+  height:1px;
+}
+
+.viewP{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left:10px;
+  height: 60px;
+}
+
+.iBtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+
+.baseTitle{
+  height: 30px;
+  font-size: 18px;
+  color: #1c2438;
+}
+
+.baseContent{
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  font-size: 13px;
+  color: #80848f;
+  line-height: 30px;
+}
+
+.baseBtn{
+  width: 60px;
+  height:35px;
+  font-size:13px;
+  border-radius: 30px;
+  line-height: 35px;
+}
+
+.moneyImage{
+  width: 25px;height:25px;
+}

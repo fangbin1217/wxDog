@@ -54,6 +54,20 @@
 </i-row>
 <i-row class="iRow"><i-col span="24" i-class="col-space2"></i-col></i-row>
 <i-row class="iRow" bindtap='aboutMe'>
+    <i-col span="3" i-class="iSecond"><image class='icon' src="{{addressImage}}"></image></i-col>
+    <i-col span="10" i-class="iThird"><view class="col-title">快递地址</view></i-col>
+    <i-col span="8" i-class="iSecond"></i-col>
+    <i-col span="3" i-class="iSecond"><image class='iYou' src="{{rightImage}}"></image></i-col>
+</i-row>
+<i-row class="iRow"><i-col span="24" i-class="col-space2"></i-col></i-row>
+<i-row class="iRow" bindtap='myShare'>
+    <i-col span="3" i-class="iSecond"><image class='icon' src="{{shareImage}}"></image></i-col>
+    <i-col span="10" i-class="iThird"><view class="col-title">分享海报</view></i-col>
+    <i-col span="8" i-class="iSecond"></i-col>
+    <i-col span="3" i-class="iSecond"><image class='iYou' src="{{rightImage}}"></image></i-col>
+</i-row>
+<i-row class="iRow"><i-col span="24" i-class="col-space2"></i-col></i-row>
+<i-row class="iRow" bindtap='myAbout'>
     <i-col span="3" i-class="iSecond"><image class='icon' src="{{gyImage}}"></image></i-col>
     <i-col span="10" i-class="iThird"><view class="col-title">关于我</view></i-col>
     <i-col span="8" i-class="iSecond"></i-col>

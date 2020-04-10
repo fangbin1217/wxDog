@@ -34,6 +34,8 @@ Page({
         collectClose: '../../images/close.png',
         collectImage:'../../images/collect.png',
         collectClick: '../../images/click.png',
+        shopImage: '../../images/shop0409.png',
+        eatImage: '../../images/eat0410.gif',
         showLeft: false,
         timerNum:0,
         myTimer1:null,
@@ -49,6 +51,7 @@ Page({
         y:0,
         friction: 5,
         damping: 40,
+        isEating: false
     },
 
     toggleLeft: function() {
@@ -134,7 +137,6 @@ Page({
       {xcxName:"礼物抽奖", xcxImage:app.globalData.imgHost +  "xcx/xcx002.png", appid: "wx99eb6626b6d04429", path: "pages/index/index?dog=2020002&ald_media_id=60693&ald_link_key=63e116e4bc3d5332"},
     ];
     var xcxSpan = 24/(xcxList.length);
-    console.log(xcxSpan);
     this.setData({
       xcxList : xcxList,
       xcxSpan: xcxSpan
@@ -374,6 +376,7 @@ Page({
           orderLeft: glLeft,
           wanLeft: wanLeft,
           progressBottom: dogWidth,
+          shopBottom: dogWidth - 90,
           toggleWidth: toggleWidth,
           closeLeftBtn: closeLeftBtn
         });
@@ -393,6 +396,15 @@ Page({
   
   random: function(lower, upper) {
     return Math.floor(Math.random() * (upper - lower+1)) + lower;
+  },
+
+  onHide: function() {
+    if (this.tipTimer > 0) {
+      clearInterval(this.tipTimer);
+    }
+    if (this.data.dogState) {
+      this.dogTap();
+    }
   },
 
 
@@ -527,18 +539,18 @@ Page({
   },
 
   myIndex: function() {
-    if (this.tipTimer > 0) {
-      clearInterval(this.tipTimer);
-    }
     wx.navigateTo({
       url: '/pages/my/index'
     });
   },
 
+  shopIndex: function() {
+    wx.navigateTo({
+      url: '/pages/shop/index'
+    });
+  },
+
   dogYifu: function() {
-    if (this.tipTimer > 0) {
-      clearInterval(this.tipTimer);
-    }
     if (this.data.dogState) {
       this.dogTap();
     }

@@ -10,6 +10,8 @@ Page({
     orderImage: '../../images/dingdan2.png',
     rightImage: '../../images/right.png',
     gyImage: '../../images/guanyu.png',
+    addressImage: '../../images/address.png',
+    shareImage: '../../images/shareIcon.png',
     switchValue : true
   },
   onLoad: function (options) {
@@ -35,6 +37,18 @@ Page({
 
   indexInit: function() {
   
+  },
+
+  myShare: function() {
+    wx.navigateTo({
+      url: '/pages/my/share'
+    });
+  },
+
+  myAbout: function() {
+    wx.navigateTo({
+      url: '/pages/my/about'
+    });
   },
 
   getWxInfo: function(e) {

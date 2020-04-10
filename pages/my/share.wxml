@@ -1,0 +1,12 @@
+<canvas canvas-id="myCanvas" style="width: {{w}}px;height:{{h}}px;position: fixed;top: -10000px;"></canvas>
+<i-row class="iRow"><i-col span="24" i-class="col-space"></i-col></i-row>
+<i-row class="iRow">
+  <i-col span="24"><view class="aboutTitle3"><image wx:if="{{!isDisabled}}" style="width:{{viewWidth}}px;height:{{viewHeight}}px;" src="{{showImg}}"></image></view></i-col>
+</i-row>
+<i-row class="iRow">
+  <i-col span="24"><view class="aboutTitle2"><button disabled="{{isDisabled}}" bindtap="saveShareImg" class="iLoginBtn" hover-class='ui-share-hover'>保存分享海报</button></view></i-col>
+</i-row>
+<i-row class="iRow"><i-col span="24" i-class="col-space2"></i-col></i-row>
+<i-row class="iRow">
+  <i-col span="24"><view class="aboutTitle1">分享到朋友圈，让更多朋友参与助力！</view></i-col>
+</i-row>
