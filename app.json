@@ -1,13 +1,13 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/index/qa",
     "pages/my/index",
     "pages/my/share",
     "pages/my/about",
     "pages/my/express",
     "pages/my/mail",
     "pages/dog/index",
+    "pages/dog/qa",
     "pages/shop/index",
     "pages/order/index",
     "pages/order/detail"

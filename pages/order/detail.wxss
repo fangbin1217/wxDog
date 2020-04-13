@@ -57,8 +57,7 @@
 
 .orderNoP{
   display: flex;
-  align-items: center;
-  justify-content: center;  
+  margin-left: 10px; 
   line-height: 30px;
   color: #80848f;
   font-size: 14px;

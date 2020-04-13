@@ -28,7 +28,7 @@
 <!--contain area-->
 
 <!--dog area-->
-<image bindtap="dogTap" src="{{dogImage}}" style="width:{{dogWidth}}px;height:{{dogHeight}}px;z-index: 1000;position:fixed;bottom:100px;left:{{dogLeft}}px;"></image>
+<image bindtap="dogTap" src="{{dogImage}}" style="width:{{dogWidth}}px;height:{{dogHeight}}px;z-index: {{dogZindex}};position:fixed;bottom:100px;left:{{dogLeft}}px;"></image>
 <!--dog wan area-->
 <image src="{{wanImage}}" style="position:fixed;bottom:20px;left:{{wanLeft}}px;width:120px;height:60px;"></image>
 <!--dog eat area-->
@@ -50,7 +50,7 @@
 <!--dog around icon area-->
 <image bindtap="dogRecord" src="{{recordIndexImage}}" animation="{{RecordData}}" style="opacity:0;z-index:900;width:60px;height:60px;position:absolute;bottom:{{recordBottom}}px;left:{{recordLeft}}px;"></image>
 <image bindtap="dogYifu" src="{{yifuIndexImage}}" animation="{{yifuData}}" style="opacity:0;z-index:900;width:60px;height:60px;position:absolute;bottom:{{yifuBottom}}px;left:{{yifuLeft}}px;"></image>
-<image bindtap="indexQa" src="{{glImage}}" animation="{{glData}}" style="opacity:0;z-index:900;width:60px;height:60px;position:absolute;bottom:{{glBottom}}px;left:{{glLeft}}px;"></image>
+<image bindtap="dogQa" src="{{glImage}}" animation="{{glData}}" style="opacity:0;z-index:900;width:60px;height:60px;position:absolute;bottom:{{glBottom}}px;left:{{glLeft}}px;"></image>
 <image bindtap="orderIndex" src="{{orderImage}}" animation="{{orderData}}" style="opacity:0;z-index:900;width:60px;height:60px;position:absolute;bottom:{{orderBottom}}px;left:{{orderLeft}}px;"></image>
 <!--dog around icon area-->
 

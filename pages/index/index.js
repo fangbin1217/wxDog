@@ -12,6 +12,7 @@ Page({
         dfcImage: '',
         dogImage:'',
         zhamenImage: '',
+        dogZindex:1000,
         isShowZhamen: true,
         zhamenLeft: 10,
         zhamenTop:0,
@@ -244,10 +245,12 @@ Page({
 
   dogRecord: function () {
     console.log('dog record')
+    if (this.data.dogState) {
+      this.dogTap();
+    }
   },
 
   dogTap: function () {
-
     var maxLen = this.data.dogLeft + this.data.dogWidth/2 - 30 - 10;
     var maxXinqinLen = -(100 + this.data.dogWidth/2 - 30) - 30;
     var maxYifuLen = -(this.data.dogLeft + this.data.dogWidth/2 - 30 - 10);
@@ -261,11 +264,12 @@ Page({
       this.animationRecord.opacity(1).translateX(maxLen).step();
       this.animationYifu.opacity(1).translateX(maxYifuLen).step();
       this.animationXinqin.opacity(1).translateY(maxXinqinLen).step();
-      this.animationGl.opacity(1).translate(maxGlX, maxGlY).step();
-      this.animationOrder.opacity(1).translate(maxOrderX, maxOrderY).step();
+      this.animationGl.opacity(1).translateX(maxGlX).translateY(maxGlY).step();
+      this.animationOrder.opacity(1).translateX(maxOrderX).translateY(maxOrderY).step();
 
       this.setData({
         dogState: true,
+        dogZindex: 800,
         RecordData:this.animationRecord.export(),
         yifuData:this.animationYifu.export(),
         xinqinData:this.animationXinqin.export(),
@@ -278,11 +282,12 @@ Page({
       this.animationRecord.opacity(0).translateX(0).step();
       this.animationYifu.opacity(0).translateX(0).step();
       this.animationXinqin.opacity(0).translateY(0).step();
-      this.animationGl.opacity(0).translate(0, 0).step();
-      this.animationOrder.opacity(0).translate(0, 0).step();
+      this.animationGl.opacity(0).translateX(0).translateY(0).step();
+      this.animationOrder.opacity(0).translateX(0).translateY(0).step();
 
       this.setData({
         dogState: false,
+        dogZindex: 1000,
         RecordData:this.animationRecord.export(),
         yifuData:this.animationYifu.export(),
         xinqinData:this.animationXinqin.export(),
@@ -401,9 +406,6 @@ Page({
   onHide: function() {
     if (this.tipTimer > 0) {
       clearInterval(this.tipTimer);
-    }
-    if (this.data.dogState) {
-      this.dogTap();
     }
   },
 
@@ -551,30 +553,36 @@ Page({
   },
 
   dogYifu: function() {
-    if (this.data.dogState) {
-      this.dogTap();
-    }
     wx.navigateTo({
       url: '/pages/dog/index'
     });
-  },
-
-  indexQa: function() {
     if (this.data.dogState) {
       this.dogTap();
     }
+
+    console.log('dogYifu');
+  },
+
+  dogQa: function() {
+    
     wx.navigateTo({
-      url: '/pages/index/qa'
+      url: '/pages/dog/qa'
     });
+    if (this.data.dogState) {
+      this.dogTap();
+    }
+    console.log('dogQa');
   },
 
   orderIndex: function() {
-    if (this.data.dogState) {
-      this.dogTap();
-    }
+    
     wx.navigateTo({
       url: '/pages/order/index'
     });
+    if (this.data.dogState) {
+      this.dogTap();
+    }
+    console.log('orderIndex');
   },
 
   /**
