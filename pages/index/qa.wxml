@@ -1,0 +1,11 @@
+<view class="myC">
+    <i-collapse name="QA">
+      <view wx:for='{{qaList}}' wx:key='unique'>
+        <i-collapse-item  title="Q：{{item.title}}" name="{{item.id}}">
+            <view slot="content" class="green-text">
+                A：{{item.content}}
+            </view>
+        </i-collapse-item>
+      </view>
+    </i-collapse>
+</view>

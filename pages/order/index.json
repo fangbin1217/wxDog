@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "订单",
+  "navigationStyle": "default",
+  "enablePullDownRefresh":true,
+  "usingComponents": {
+    "i-row": "../../dist/row/index",
+    "i-col": "../../dist/col/index"
+  }
+}

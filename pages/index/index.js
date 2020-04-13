@@ -559,6 +559,24 @@ Page({
     });
   },
 
+  indexQa: function() {
+    if (this.data.dogState) {
+      this.dogTap();
+    }
+    wx.navigateTo({
+      url: '/pages/index/qa'
+    });
+  },
+
+  orderIndex: function() {
+    if (this.data.dogState) {
+      this.dogTap();
+    }
+    wx.navigateTo({
+      url: '/pages/order/index'
+    });
+  },
+
   /**
    * 用户点击右上角分享
    */

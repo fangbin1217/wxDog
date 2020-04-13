@@ -1,0 +1,46 @@
+.col-space2{
+  background-color: #f8f8f9;
+  height:1px;
+}
+
+.sourceImageP{
+  display: flex;
+  height: 60px;
+}
+
+.sourceImage{
+  width:40px;height:40px;
+  margin-top: 10px;
+  margin-left: 10px;
+  border: 1px solid #dddee1;
+  border-radius: 40px;
+}
+
+.contP{
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  font-size: 13px;
+}
+
+.orderTitle{
+  color: #495060;
+}
+
+.sourceName{
+  color: #80848f;
+}
+
+.createTime{
+  color: #80848f;
+}
+
+.statusName{
+  color: #ed3f14;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}

@@ -45,6 +45,12 @@ Page({
     });
   },
 
+  myExpress: function() {
+    wx.navigateTo({
+      url: '/pages/my/express'
+    });
+  },
+
   myAbout: function() {
     wx.navigateTo({
       url: '/pages/my/about'

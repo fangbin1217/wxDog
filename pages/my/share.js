@@ -1,7 +1,7 @@
 //logs.js
 const app = getApp();
 const ctx = wx.createCanvasContext('myCanvas');
-var openStatus = false;
+//var openStatus = false;
 var canvasToTempFilePath = null;
 
 Page({
@@ -94,10 +94,25 @@ Page({
       src : avatarImage,
       success : res => {
           ctx.restore();
+
+
           let x = 10;
           let y = 650;
           let w = 100;
           let h = 100;
+
+          // 设置字体
+          //ctx.font = "18px bold 黑体";
+          ctx.setFontSize(24);
+          // 设置颜色
+          ctx.setFillStyle("#1c2438");
+          // 设置水平对齐方式
+          ctx.setTextBaseline('middle');
+          // 绘制文字（参数：要写的字，x坐标，y坐标）
+          var textX = x+w + 30;
+          var textY = y+h/2;
+          ctx.fillText("我的昵称", textX, textY);
+
           ctx.rect(x, y, w, h);
           ctx.beginPath();
           ctx.arc(x+w/2, y+h/2, w/2, 0, 2 * Math.PI, false);
@@ -105,9 +120,11 @@ Page({
           //res.path 为getImageInfo预加载的缓存图片地址
           ctx.drawImage( res.path, x, y, w, h);
           ctx.draw(true);
+          
+          
           that.shareTimer = setTimeout(function() {
             that.saveImageEnd();
-          }, 1200);
+          }, 2000);
           
       },
       fail: res => {
@@ -155,28 +172,25 @@ Page({
       saveId: '保存狗狗领养记海报'
     })
     // 获取用户是否开启用户授权相册
-    if (!openStatus) {
+    if (app.globalData.openStatus) {
       wx.openSetting({
         success: (result) => {
           if (result) {
             if (result.authSetting["scope.writePhotosAlbum"] === true) {
-              openStatus = true;
+              app.globalData.openStatus = true;
               wx.saveImageToPhotosAlbum({
                 filePath: canvasToTempFilePath,
                 success() {
-                  that.setData({
-                    showShareImg: false
-                  })
                   wx.showToast({
                     title: '图片保存成功，快去分享到朋友圈吧~',
                     duration: 2000
-                  })
+                  });
                 },
                 fail() {
                   wx.showToast({
                     title: '保存失败.',
                     image: app.globalData.image_warning
-                  })
+                  });
                 }
               })
             }
@@ -193,63 +207,58 @@ Page({
             wx.authorize({
               scope: 'scope.writePhotosAlbum',
               success() {
-                openStatus = true
+                app.globalData.openStatus = true
                 wx.saveImageToPhotosAlbum({
                   filePath: canvasToTempFilePath,
                   success() {
-                    that.setData({
-                      showShareImg: false
-                    })
+                    
                     wx.showToast({
-                      title: '图片保存成功，快去分享到朋友圈吧~',
-                      icon: 'none',
+                      title: '图片保存成功',
+                      icon: 'success',
                       duration: 2000
-                    })
+                    });
                   },
                   fail() {
                     wx.showToast({
-                      title: '保存失败。',
+                      title: '保存失败！',
                       image: app.globalData.image_warning
-                    })
+                    });
                   }
-                })
+                });
               },
               fail() {
                 // 如果用户拒绝过或没有授权，则再次打开授权窗口
-                openStatus = false
-                console.log('请设置允许访问相册')
+                app.globalData.openStatus = false;
                 wx.showToast({
                   title: '请设置允许访问相册',
-                  icon: 'none'
-                })
+                  image: app.globalData.image_warning
+                });
               }
-            })
+            });
           } else {
             // 有则直接保存
-            openStatus = true
+            app.globalData.openStatus = true;
             wx.saveImageToPhotosAlbum({
               filePath: canvasToTempFilePath,
               success() {
-                that.setData({
-                  showShareImg: false
-                })
+                
                 wx.showToast({
-                  title: '图片保存成功，快去分享到朋友圈吧~',
-                  icon: 'none',
+                  title: '图片保存成功',
+                  icon: 'success',
                   duration: 2000
-                })
+                });
               },
               fail() {
                 wx.showToast({
                   title: '保存失败！',
                   image: app.globalData.image_warning
-                })
+                });
               }
-            })
+            });
           }
         },
         fail(err) {
-          console.log(err)
+          console.log(err);
         }
       })
     }

@@ -53,7 +53,7 @@
     <i-col span="3" i-class="iSecond"><image class='iYou' src="{{rightImage}}"></image></i-col>
 </i-row>
 <i-row class="iRow"><i-col span="24" i-class="col-space2"></i-col></i-row>
-<i-row class="iRow" bindtap='aboutMe'>
+<i-row class="iRow" bindtap='myExpress'>
     <i-col span="3" i-class="iSecond"><image class='icon' src="{{addressImage}}"></image></i-col>
     <i-col span="10" i-class="iThird"><view class="col-title">快递地址</view></i-col>
     <i-col span="8" i-class="iSecond"></i-col>

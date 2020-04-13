@@ -8,6 +8,7 @@ App({
     imgHost: 'https://img.hzmulou.com/',
     image_warning: '../../images/Warning.png',
     isFlush:false,
+    openStatus: false,
     version: '1.0.0'
   },
   

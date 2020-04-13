@@ -1,0 +1,14 @@
+{
+  "navigationBarTitleText": "快递信息",
+  "navigationStyle": "default",
+  "enablePullDownRefresh":false,
+  "usingComponents": {
+    "i-row": "../../dist/row/index",
+    "i-col": "../../dist/col/index",
+    "i-grid": "../../dist/grid/index",
+    "i-grid-item": "../../dist/grid-item/index",
+    "i-grid-icon": "../../dist/grid-icon/index",
+    "i-grid-label": "../../dist/grid-label/index",
+    "i-button": "../../dist/button/index" 
+  }
+}
