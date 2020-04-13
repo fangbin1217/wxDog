@@ -46,7 +46,7 @@
     </i-col>
 </i-row>
 <i-row class="iRow"><i-col span="24" i-class="col-space2"></i-col></i-row>
-<i-row class="iRow" bindtap='aboutMe'>
+<i-row class="iRow" bindtap='orderIndex'>
     <i-col span="3" i-class="iSecond"><image class='icon' src="{{orderImage}}"></image></i-col>
     <i-col span="10" i-class="iThird"><view class="col-title">我的订单</view></i-col>
     <i-col span="8" i-class="iSecond"></i-col>

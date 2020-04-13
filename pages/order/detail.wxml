@@ -1,0 +1,62 @@
+<i-row class="iRow">
+  <i-col span="24">
+    <view class="sourceImageP">
+      <image class="sourceImage" src="{{orderInfo.sourceImage}}"></image>
+      <view class="myTitle">{{orderInfo.title}}</view>
+    </view>
+  </i-col>
+</i-row>
+<i-row class="iRow">
+  <i-col span="24">
+      <view class="myMoney">{{orderInfo.money}}</view>
+  </i-col>
+</i-row>
+<i-row class="iRow">
+  <i-col span="24">
+      <view class="status">{{orderInfo.status}}</view>
+  </i-col>
+</i-row>
+<i-row class="iRow"><i-col span="24">
+  <view class="orderNoP">订单号：<text class="orderNo">{{orderInfo.orderNo}}</text></view>
+</i-col></i-row>
+<i-row class="iRow"><i-col span="24" i-class="col-space2"></i-col></i-row>
+<i-row class="iRow"><i-col span="24" i-class="col-space3"></i-col></i-row>
+<i-row class="iRow">
+  <i-col span="24">
+    <view class="expressTitle">快递信息</view>
+  </i-col>
+</i-row>
+<i-row class="iRow"><i-col span="24" i-class="col-space3"></i-col></i-row>
+<i-row class="iRow">
+  <i-col span="12">
+    <view class="expressTitle2">收件人</view>
+  </i-col>
+  <i-col span="12">
+    <view class="expressTitle2">联系电话</view>
+  </i-col>
+</i-row>
+<i-row class="iRow">
+  <i-col span="12">
+    <view class="expressValue">{{orderInfo.contactName}}</view>
+  </i-col>
+  <i-col span="12">
+    <view class="expressValue">{{orderInfo.contactMobile}}</view>
+  </i-col>
+</i-row>
+<i-row class="iRow">
+  <i-col span="24">
+    <view class="expressTitle">详细地址</view>
+  </i-col>
+</i-row>
+<i-row class="iRow"><i-col span="24" i-class="col-space3"></i-col></i-row>
+<i-row class="iRow">
+  <i-col span="24">
+    <view class="expressValue3">{{orderInfo.address}}</view>
+  </i-col>
+</i-row>
+<i-row class="iRow"><i-col span="24" i-class="col-space4"></i-col></i-row>
+<i-row class="iRow">
+  <i-col span="24">
+    <view bindtap="myAbout" class="question">如对订单有疑问，请联系客服处理！</view>
+  </i-col>
+</i-row>

@@ -1,0 +1,113 @@
+.sourceImage{
+  width:40px;height:40px;
+  border: 1px solid #dddee1;
+  border-radius: 40px;
+}
+
+.sourceImageP{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  height: 60px;
+}
+
+.myTitle{
+  line-height: 60px;
+  color: #80848f;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.myMoney{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  line-height: 30px;
+  color: #1c2438;
+  font-size: 18px;
+  height: 30px;
+}
+
+.status{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  line-height: 30px;
+  color: #ed3f14;
+  font-size: 18px;
+  height: 30px;
+}
+
+.col-space2{
+  background-color: #f8f8f9;
+  height:1px;
+}
+
+.col-space{
+  height:5px;
+}
+
+.col-space3{
+  height:10px;
+}
+
+.col-space4{
+  height:20px;
+}
+
+.orderNoP{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  line-height: 30px;
+  color: #80848f;
+  font-size: 14px;
+  height: 30px;
+}
+
+.orderNo{
+  color: #495060;
+  font-size: 16px;
+  height: 30px;
+}
+
+.expressTitle{
+  font-size:14px;
+  font-weight:bold;
+  color:#80848f;
+  margin-left:10px;
+}
+
+.expressTitle2{
+  font-size:14px;
+  color:#80848f;
+  font-weight:bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:30px;
+}
+
+.expressValue3{
+  font-size:16px;
+  color:#1c2438;
+  margin-left:10px;
+}
+
+.expressValue{
+  font-size:16px;
+  color:#1c2438;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:30px;
+}
+
+.question{
+  font-size:16px;
+  color:#576B95;
+  display: flex;
+  margin-left: 10px;
+  height:30px;
+  line-height: 30px;
+}

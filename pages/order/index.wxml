@@ -1,17 +1,16 @@
 <view wx:for='{{orderList}}' wx:key='unique'>
   <i-row class="iRow">
     <i-col span="6">
-      <view class="sourceImageP"><image class="sourceImage" src="{{item.sourceImage}}"></image></view>
+      <view class="sourceImageP" bindtap="orderDetail" data-id="{{item.id}}"><image class="sourceImage" src="{{item.sourceImage}}"></image></view>
     </i-col>
     <i-col span="12">
-      <view class="contP">
+      <view class="contP" bindtap="orderDetail" data-id="{{item.id}}">
         <view class="orderTitle">{{item.title}}</view>
-        <view class="sourceName">{{item.sourceName}}</view>
         <view class="createTime">{{item.createTime}}</view>
       </view>
     </i-col>
     <i-col span="6">
-      <view class="statusName">{{item.statusName}}</view>
+      <view class="statusName" bindtap="orderDetail" data-id="{{item.id}}">{{item.statusName}}<image class='iYou' src="{{rightImage}}"></image></view>
     </i-col>
   </i-row>
   <i-row class="iRow"><i-col span="24" i-class="col-space2"></i-col></i-row>

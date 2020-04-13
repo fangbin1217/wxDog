@@ -39,6 +39,12 @@ Page({
   
   },
 
+  orderIndex: function() {
+    wx.navigateTo({
+      url: '/pages/order/index'
+    });
+  },
+
   myShare: function() {
     wx.navigateTo({
       url: '/pages/my/share'
