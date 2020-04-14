@@ -8,6 +8,8 @@
     "pages/my/mail",
     "pages/dog/index",
     "pages/dog/qa",
+    "pages/dog/record",
+    "pages/dog/detail",
     "pages/shop/index",
     "pages/order/index",
     "pages/order/detail"

@@ -1,0 +1,80 @@
+.bgImage{
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+}
+
+.myP{
+  display:flex;
+  flex-direction: column;
+}
+
+.smallImage{
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  border:1px solid #e9eaec;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.smallImageP2{
+  height: 30px;
+  margin-left: 10px;
+  line-height: 30px;
+  border-bottom: 1px solid #e9eaec;
+  color: #80848f;
+  font-size: 13px;
+}
+
+.smallImageP{
+  display: flex;
+  height: 80px;
+}
+
+.smallName{
+  font-size:16px;
+  color: #495060;
+  height: 80px;
+  line-height: 80px;
+  margin-left: 10px;
+}
+
+.myC{
+  position:absolute;
+  top:340px;
+}
+
+.col-space2{
+  background-color: #f8f8f9;
+  height:1px;
+}
+
+.iLoginBtn{
+  width: 60px;
+  height:30px;
+  font-size:16px;
+  background-color: #19be6b;
+  color: white;
+  border-radius: 30px;
+  line-height: 30px;
+  position: absolute;
+  right:20px;
+  margin-top:25px;
+}
+
+.iBtn2{
+  height:40px;
+  font-size:14px;
+  border-radius: 30px;
+  line-height: 40px;
+}
+
+.myTitle5{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #495060;
+  height:60px;
+}

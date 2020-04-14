@@ -115,6 +115,7 @@
   background-color: #576B95;
   color: white;
   border-radius: 30px;
+  line-height: 40px;
 }
 
 .myTitle2{

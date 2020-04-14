@@ -1,0 +1,20 @@
+  <image class="bgImage" style="position:absolute;left:{{bgLeft}}px;top:10px;z-index:1;" src="{{cateInfo.bgImage}}"></image>
+  <view wx:for='{{cateInfo.pieceList}}' wx:key='unique'>
+    <image wx:if="{{item.isShow}}" class="bgImage" style="position:absolute;left:{{bgLeft}}px;top:10px;z-index:3;" src="{{item.pieceImage}}"></image>
+    <image wx:else="{{item.isShow}}" class="bgImage" style="position:absolute;left:{{bgLeft}}px;top:10px;z-index:2;" src="{{item.lockImage}}"></image>
+  </view>
+<view class="myC">
+  <view wx:for='{{taskList}}' wx:key='unique' class="myP">
+        <view class="smallImageP" style="width:{{viewWidth}}px;">
+          <image class="smallImage" src="{{item.image}}"></image>
+          <view class="smallName">{{item.name}}</view>
+          <button class="iLoginBtn" hover-class='ui-share-hover'>领取</button>
+        </view>
+        <view class="smallImageP2" style="width:{{viewWidth}}px;">{{item.content}}</view>
+  </view>
+  <view class="myTitle5">
+    <button class="iBtn2" style="width:{{viewWidth - 40}}px;background-color: #09BB07;color: white;" hover-class='ui-share-hover'>合成</button>
+  </view>
+</view>
+
+

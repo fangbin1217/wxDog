@@ -16,7 +16,7 @@
 </view></i-col>
 	</i-row>
 	<i-row class="iRow">
-		<i-col span="12"><button style="position:absolute;bottom:10px;left:20px;"  hover-class	="ui-share-hover" class='bottomImageP' bindtap="lin"><image class="bottomImage" src="{{bottomLinImage}}"></image></button></i-col>
+		<i-col span="12"><button style="position:absolute;bottom:10px;left:20px;"  hover-class="ui-share-hover" class='bottomImageP' bindtap="lin"><image class="bottomImage" src="{{bottomLinImage}}"></image></button></i-col>
 		<i-col span="12">
 			
 			<view style="position:absolute;bottom:10px;right:20px;" bindtap="wei"><i-badge count="999" overflow-count="9999">

@@ -43,6 +43,12 @@ Page({
 
   },
 
+  dogDetail: function(e) {
+    wx.navigateTo({
+      url: '/pages/dog/detail'
+    });
+  },
+
   indexInit: function() {
     var daojuList = [
       {daojuId: 1, title: '帽子道具卡', image: app.globalData.imgHost + 'index/hat_small0408.png', counts: 1, isWear: false},

@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "记录",
+  "navigationStyle": "default",
+  "enablePullDownRefresh":true,
+  "usingComponents": {
+    "i-row": "../../dist/row/index",
+    "i-col": "../../dist/col/index",
+    "i-tabs": "../../dist/tabs/index",
+    "i-tab": "../../dist/tab/index"
+  }
+}

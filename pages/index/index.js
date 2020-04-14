@@ -264,8 +264,8 @@ Page({
       this.animationRecord.opacity(1).translateX(maxLen).step();
       this.animationYifu.opacity(1).translateX(maxYifuLen).step();
       this.animationXinqin.opacity(1).translateY(maxXinqinLen).step();
-      this.animationGl.opacity(1).translateX(maxGlX).translateY(maxGlY).step();
-      this.animationOrder.opacity(1).translateX(maxOrderX).translateY(maxOrderY).step();
+      this.animationGl.opacity(1).translate(maxGlX,maxGlY).step();
+      this.animationOrder.opacity(1).translate(maxOrderX,maxOrderY).step();
 
       this.setData({
         dogState: true,
@@ -282,8 +282,8 @@ Page({
       this.animationRecord.opacity(0).translateX(0).step();
       this.animationYifu.opacity(0).translateX(0).step();
       this.animationXinqin.opacity(0).translateY(0).step();
-      this.animationGl.opacity(0).translateX(0).translateY(0).step();
-      this.animationOrder.opacity(0).translateX(0).translateY(0).step();
+      this.animationGl.opacity(0).translate(0,0).step();
+      this.animationOrder.opacity(0).translate(0,0).step();
 
       this.setData({
         dogState: false,
