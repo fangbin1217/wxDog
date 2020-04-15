@@ -1,2 +1,26 @@
-<!--pages/dog/record.wxml-->
-<text>pages/dog/record.wxml</text>
+<i-tabs current="{{ current }}" bindchange="handleChange">
+    <i-tab key="1" title="饲料"></i-tab>
+    <i-tab key="2" title="铜币"></i-tab>
+</i-tabs>
+<i-row class="iRow">
+  <i-col span="8">
+  <view class="recordTitle">时间</view>
+  </i-col>
+  <i-col span="8">
+  <view class="recordTitle">类型</view>
+  </i-col>
+  <i-col span="8">
+  <view class="recordTitle">数量</view>
+  </i-col>
+</i-row>
+<view wx:for='{{feedList}}' wx:key='unique'>
+  <i-row class="iRow">
+    <i-col span="8"><view class="recordContent" >{{item.createTime}}</view></i-col>
+    <i-col span="8"><view class="recordContent2" >{{item.type}}</view></i-col>
+    <i-col span="8">
+      <view wx:if="{{item.isAdd}}" class="recordContent3" >+{{item.counts}}</view>
+      <view wx:else class="recordContent4" >-{{item.counts}}</view>
+    </i-col>
+  </i-row>
+  <i-row class="iRow"><i-col span="24" i-class="col-space2"></i-col></i-row>
+</view>

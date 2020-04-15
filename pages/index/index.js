@@ -242,14 +242,6 @@ Page({
     }
   },
 
-
-  dogRecord: function () {
-    console.log('dog record')
-    if (this.data.dogState) {
-      this.dogTap();
-    }
-  },
-
   dogTap: function () {
     var maxLen = this.data.dogLeft + this.data.dogWidth/2 - 30 - 10;
     var maxXinqinLen = -(100 + this.data.dogWidth/2 - 30) - 30;
@@ -407,6 +399,9 @@ Page({
     if (this.tipTimer > 0) {
       clearInterval(this.tipTimer);
     }
+    if (this.data.dogState) {
+      this.dogTap();
+    }
   },
 
 
@@ -553,35 +548,45 @@ Page({
   },
 
   dogYifu: function() {
-    wx.navigateTo({
-      url: '/pages/dog/index'
-    });
     if (this.data.dogState) {
       this.dogTap();
     }
+    wx.navigateTo({
+      url: '/pages/dog/index'
+    });
 
     console.log('dogYifu');
   },
 
-  dogQa: function() {
-    
-    wx.navigateTo({
-      url: '/pages/dog/qa'
-    });
+  dogRecord: function () {
+    console.log('dog record')
     if (this.data.dogState) {
       this.dogTap();
     }
+    wx.navigateTo({
+      url: '/pages/dog/record'
+    });
+  },
+
+  dogQa: function() {
+    if (this.data.dogState) {
+      this.dogTap();
+    }
+    wx.navigateTo({
+      url: '/pages/dog/qa'
+    });
+    
     console.log('dogQa');
   },
 
   orderIndex: function() {
-    
-    wx.navigateTo({
-      url: '/pages/order/index'
-    });
     if (this.data.dogState) {
       this.dogTap();
     }
+    wx.navigateTo({
+      url: '/pages/order/index'
+    });
+    
     console.log('orderIndex');
   },
 

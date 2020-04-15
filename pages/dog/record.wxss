@@ -1,1 +1,55 @@
-/* pages/dog/record.wxss */
+.recordTitle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  line-height: 30px;
+  font-size:16px;
+  color:#1c2438;
+}
+
+.recordContent{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  line-height: 30px;
+  font-size:13px;
+  color:#80848f;
+}
+
+.recordContent2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  line-height: 30px;
+  font-weight: bold;
+  font-size:16px;
+  color:#1c2438;
+}
+
+.recordContent3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  line-height: 30px;
+  font-size:14px;
+  color:#ed3f14;
+}
+
+.recordContent4{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  line-height: 30px;
+  font-size:14px;
+  color:#19be6b;
+}
+
+.col-space2{
+  background-color: #f8f8f9;
+  height:1px;
+}
